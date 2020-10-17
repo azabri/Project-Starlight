@@ -1,0 +1,40 @@
+#include <iostream>
+#include "std_lib_facilities.h"
+
+int main()
+{
+    cout << "Adj meg egy matematikai muveletet: szam muvelet szam\n";
+    cout << "Irj x-et a matematikai muvelet vegere\n";
+
+    double egyikszam = 0, masikszam = 0;
+    
+    cin >> egyikszam;
+    if (!cin) error("Nem adtal meg egyik szamot!");
+    
+    for (char op; cin >> op; ) {
+        if (op != 'x') cin >> masikszam;
+        if (!cin) error("Nem adtal meg masik szamot!");
+
+        switch (op) {
+        case '+':
+            egyikszam += masikszam;
+            break;
+        case '-':
+            egyikszam -= masikszam;
+            break;
+        case '*':
+            egyikszam *= masikszam;
+            break;
+        case '/':
+            egyikszam /= masikszam;
+            break;
+        default:
+            cout << "Eredmeny: " << egyikszam << endl;
+            return 0;
+        }
+    }
+
+    error("Rossz muvelet");
+
+    return 0;
+}
