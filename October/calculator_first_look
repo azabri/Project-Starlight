@@ -3,6 +3,7 @@
 
 int main()
 {
+    cout << "This is a calculator in hungarian\n";
     cout << "Adj meg egy matematikai muveletet: szam muvelet szam\n";
     cout << "Irj x-et a matematikai muvelet vegere\n";
 
