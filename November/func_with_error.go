@@ -7,7 +7,6 @@ import (
  
  func main() {
   result, err := sqrt(16)
-  
   if err != nil {
     fmt.Println(err)
   } else {
